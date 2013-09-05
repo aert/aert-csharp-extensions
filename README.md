@@ -1,4 +1,8 @@
 aert-csharp-extensions
 ======================
 
-My C# helper classes for string, i/o, files ... manipulation.
+Common C# extension methods.
+
+Requirements:
+
+* .NET 3.5
