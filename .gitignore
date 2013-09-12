@@ -3,7 +3,8 @@ bin
 obj
 
 *.suo
+*.user
+*.cs~
 
 # mstest test results
 TestResults
-*.user

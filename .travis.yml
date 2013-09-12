@@ -1,0 +1,9 @@
+language: c
+ 
+install:
+  - sudo apt-get install mono-devel mono-gmcs nunit-console
+ 
+script:
+  - xbuild aert-csharp-extensions/aert-csharp-extensions.csproj
+#  - nunit-console ./src/FluentMigrator.Tests/bin/Debug/FluentMigrator.Tests.dll -exclude Integration,NotWorkingOnMono
+
