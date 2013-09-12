@@ -380,7 +380,7 @@ namespace aert_csharp_extensions
         }
 
         /// <summary>
-        ///     Converti l'entrée en une chaine de taille fixe au format 0001
+        ///     Convertit l'entrée en une chaine de taille fixe au format 0001
         /// </summary>
         public static string HelpToCobolLong(this string str, int width)
         {
@@ -408,6 +408,23 @@ namespace aert_csharp_extensions
             }
 
             return valeur;
+        }
+
+        #endregion
+
+        #region Stream
+
+        /// <summary>
+        /// Retourne un objet Stream à partir de la chaine spécifiée.
+        /// </summary>
+        public static Stream HelpToStream(this string str)
+        {
+            MemoryStream stream = new MemoryStream();
+            StreamWriter writer = new StreamWriter(stream);
+            writer.Write(str);
+            writer.Flush();
+            stream.Position = 0;
+            return stream;
         }
 
         #endregion

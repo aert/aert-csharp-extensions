@@ -124,28 +124,22 @@ namespace aert_csharp_extensions
 
         #endregion
 
-        /// <summary>
-        /// Convertit la donnée XmlNode en XElement pour requêtage avec LINQ to XML.
-        /// </summary>
-        public static XElement HelperToXElement(this XmlNode node)
+        #region ToX
+
+
+        public static XDocument HelpToXDocument(this XmlDocument document)
         {
-            XDocument xDoc = new XDocument();
-            using (XmlWriter xmlWriter = xDoc.CreateWriter())
-                node.WriteTo(xmlWriter);
-            return xDoc.Root;
+            return document.HelpToXDocument(LoadOptions.None);
         }
 
-        /// <summary>
-        /// Convertit la donnée XElement en XmlNode.
-        /// </summary>
-        public static XmlNode HelperToXmlNode(this XElement element)
+        public static XDocument HelpToXDocument(this XmlDocument document, LoadOptions options)
         {
-            using (XmlReader xmlReader = element.CreateReader())
+            using (XmlNodeReader reader = new XmlNodeReader(document))
             {
-                XmlDocument xmlDoc = new XmlDocument();
-                xmlDoc.Load(xmlReader);
-                return xmlDoc;
+                return XDocument.Load(reader, options);
             }
         }
+
+        #endregion
     }
 }
