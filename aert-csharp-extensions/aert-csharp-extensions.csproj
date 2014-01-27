@@ -45,6 +45,7 @@
     <Compile Include="FileFixedWidthHelper.cs" />
     <Compile Include="FileFixedWidthReader.cs" />
     <Compile Include="FileFixedWidthWriter.cs" />
+    <Compile Include="IdentifierHelper.cs" />
     <Compile Include="IOHelper.cs" />
     <Compile Include="IterableHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
