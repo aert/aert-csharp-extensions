@@ -9,7 +9,7 @@ namespace aert_csharp_extensions
 
     /// <summary>
     /// Classe utilitaire permettant de faciliter l'affichage des informations de déboguage.
-    /// Le format YAML est préféré pour la conversion object->string .
+    /// Le format YAML est préféré pour la conversion object->string.
     /// </summary>
     public class DebugHelper
     {
